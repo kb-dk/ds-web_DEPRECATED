@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-
-    <Welcome/>
+    <Welcome />
   </div>
 </template>
 
@@ -10,7 +9,7 @@
 import Welcome from '@/components/Welcome.vue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Welcome
   }
