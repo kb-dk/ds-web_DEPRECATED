@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 import App from './App.vue'
 import router from './router/router'
-import { search } from './_store/search-store'
+import { search } from './store/search-store'
 import './styles/main.scss'
 
 Vue.use(Vuex)

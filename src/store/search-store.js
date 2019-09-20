@@ -1,8 +1,7 @@
-import { searchService } from '../_services/search-service'
+import { searchService } from '../services/search-service'
 
 const state = {
-  all: {},
-  loading: false
+  all: {}
 }
 
 const actions = {
@@ -10,19 +9,17 @@ const actions = {
     commit('doSearchSuccess')
     searchService
       .search(params)
-      .then(users => commit('doSearchSuccess', users), error =>
+      .then(searchResult => commit('doSearchSuccess', searchResult), error =>
         commit('doSearchError', error))
   }
 }
 
 const mutations = {
-  doSearchSuccess (state, data) {
-    state.all = { data }
-    state.loading = !data
+  doSearchSuccess (state, searchResult) {
+    state.all = { searchResult }
   },
   doSearchError (state, error) {
     state.all = { error }
-    state.loading = false
   }
 }
 

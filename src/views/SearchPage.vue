@@ -1,7 +1,7 @@
 <template>
   <div>
     Search
-    {{ data }}
+    {{ searchResult }}
   </div>
 </template>
 
@@ -17,8 +17,7 @@ export default {
   },
   computed: {
     ...mapState({
-      data: state => state.search.all.data,
-      loading: state => state.search.loading
+      searchResult: state => state.search.all.searchResult
     })
   },
   mounted () {
