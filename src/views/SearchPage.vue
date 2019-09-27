@@ -1,6 +1,10 @@
 <template>
   <div>
-    Search
+    <h1>Search</h1>
+    <b-form-input v-model="text" placeholder="Search" />
+    <div class="mt-2">
+      Value: {{ searchTerm }}
+    </div>
     {{ searchResult }}
   </div>
 </template>
@@ -22,7 +26,7 @@ export default {
   },
   mounted () {
     this.searchTerm = 'test'
-    this.doSearch(this)
+    // this.doSearch(this)
   },
   methods: {
     ...mapActions('search', ['doSearch'])
