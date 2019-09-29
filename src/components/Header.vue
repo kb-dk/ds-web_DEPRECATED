@@ -47,6 +47,25 @@
       </div>
     </nav>
     <Search />
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-light third-navbar">
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-left">
+          <li class="nav-item">
+            <a class="nav-link py-0 text-dark text-center" href="#"><small>Alt</small></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-0 text-dark text-center" href="#"><small>Bøger og tidsskrifter</small></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link py-0 text-dark text-center" href="#"><small>Billeder</small></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-0 text-dark text-center" href="#"><small>Kb.dk</small></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </template>
 
