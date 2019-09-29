@@ -8,9 +8,12 @@ import { search } from './store/search-store'
 import './styles/main.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'vue-awesome/icons/search'
+import Icon from 'vue-awesome/components/Icon'
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
+Vue.component('icon', Icon)
 
 export const store = new Vuex.Store({
   modules: {
