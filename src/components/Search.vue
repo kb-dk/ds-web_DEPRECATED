@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <form class="mx-2 my-auto d-inline w-100">
+    <form class="mx-2 my-auto d-inline w-100" @submit.prevent="submitSearch">
       <div class="input-group search-group">
         <span class="input-group-prepend">
           <div class="dropdown">
@@ -24,13 +24,14 @@
         </span>
         <input
           id="search-input"
+          v-model="searchQuery"
           class="form-control py-2 border-right-0 border-left-0 border rounded-0 shadow-none"
           type="search"
           placeholder="Søg">
         <span class="input-group-append">
           <button
             class="btn btn-outline-secondary border-left-0 border bg-white shadow-none"
-            type="button">
+            type="submit">
             <icon name="search" />
           </button>
         </span>
@@ -43,6 +44,17 @@
 import Icon from 'vue-awesome/components/Icon'
 export default {
   name: 'Search',
-  components: Icon
+  components: Icon,
+  data () {
+    return {
+      searchQuery: ''
+    }
+  },
+  methods: {
+    submitSearch: function () {
+      alert('Du søgte på: ' + this.searchQuery)
+    }
+  }
+
 }
 </script>
