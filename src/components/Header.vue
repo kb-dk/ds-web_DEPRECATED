@@ -4,7 +4,7 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>Udlån</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("message.loans") }}</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><small>Åbningstider</small></a>

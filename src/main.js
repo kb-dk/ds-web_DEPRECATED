@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
+import VueI18n from 'vue-i18n'
 
 import App from './App.vue'
 import router from './router/router'
@@ -11,6 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
+Vue.use(VueI18n)
 
 export const store = new Vuex.Store({
   modules: {
