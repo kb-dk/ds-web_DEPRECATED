@@ -24,8 +24,28 @@ export const store = new Vuex.Store({
 
 Vue.config.productionTip = false
 
+const messages = {
+  en: {
+    first_navbar: {
+      loans: 'Loans'
+    }
+  },
+  da: {
+    first_navbar: {
+      loans: 'Udlån'
+    }
+  }
+}
+
+// Create VueI18n instance with options
+const i18n = new VueI18n({
+  locale: 'da',
+  messages
+})
+
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
