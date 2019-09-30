@@ -27,12 +27,13 @@
           v-model="searchQuery"
           class="form-control py-2 border-right-0 border-left-0 border rounded-0 shadow-none"
           type="search"
-          placeholder="Søg">
+          placeholder=""
+          autofocus>
         <span class="input-group-append">
           <button
-            class="btn btn-outline-secondary border-left-0 border bg-white shadow-none"
+            class="btn btn-outline-secondary border-left-0 border bg-light shadow-none"
             type="submit">
-            <icon name="search" />
+            Søg
           </button>
         </span>
       </div>
@@ -41,10 +42,8 @@
 </template>
 
 <script>
-import Icon from 'vue-awesome/components/Icon'
 export default {
   name: 'Search',
-  components: Icon,
   data () {
     return {
       searchQuery: ''
