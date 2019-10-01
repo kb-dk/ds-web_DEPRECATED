@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
 import VueI18n from 'vue-i18n'
+import Translations from '../i18n/translations.json'
 
 import App from './App.vue'
 import router from './router/router'
@@ -24,23 +25,10 @@ export const store = new Vuex.Store({
 
 Vue.config.productionTip = false
 
-const messages = {
-  en: {
-    first_navbar: {
-      loans: 'Loans'
-    }
-  },
-  da: {
-    first_navbar: {
-      loans: 'Udlån'
-    }
-  }
-}
-
 // Create VueI18n instance with options
 const i18n = new VueI18n({
   locale: 'da',
-  messages
+  messages: Translations
 })
 
 new Vue({

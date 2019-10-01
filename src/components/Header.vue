@@ -4,7 +4,7 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("first_navbar.loans") }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") }}</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><small>Åbningstider</small></a>
