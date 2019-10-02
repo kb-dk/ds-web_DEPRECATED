@@ -7,13 +7,13 @@
             <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>Åbningstider</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") }}</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><small>Om Det Kgl. Bibliotek</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>In English</small></a>
+            <a class="nav-link" href="#" @click.stop="switchLanguage"><small>In English</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><small>Login</small></a>
@@ -75,7 +75,12 @@ import Search from '@/components/Search.vue'
 export default {
   name: 'Header',
   components: {
-    Search
+    Search,
+  },
+  methods: {
+    switchLanguage () {
+      this.$i18n.locale = 'en'
+    }
   }
 }
 </script>

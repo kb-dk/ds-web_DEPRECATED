@@ -1,12 +1,14 @@
 {
   "en": {
     "firstNavbar": {
-      "loans": "Loans"
+      "loans": "Loans",
+      "openingHours": "Opening hours"
     }
   },
   "da": {
     "firstNavbar": {
-      "loans": "Udlån"
+      "loans": "Udlån",
+      "openingHours": "Åbningstider"
     }
   }
 }
