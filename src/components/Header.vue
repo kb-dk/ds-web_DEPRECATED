@@ -4,19 +4,19 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") | capitalize }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") | capitalize }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>Om Det Kgl. Bibliotek</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize }}</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" @click.stop="switchLanguage"><small>In English</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>Login</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.login") | capitalize }}</small></a>
           </li>
         </ul>
       </div>
@@ -29,19 +29,19 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">FIND MATERIALE</a>
+            <a class="nav-link" href="#">{{ $t("secondNavbar.findMaterial") | uppercase }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">INSPIRATION</a>
+            <a class="nav-link" href="#">{{ $t("secondNavbar.inspiration") | uppercase }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SERVICES</a>
+            <a class="nav-link" href="#">{{ $t("secondNavbar.services") | uppercase }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ARRANGEMENTER</a>
+            <a class="nav-link" href="#">{{ $t("secondNavbar.arrangements") | uppercase }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BESØG OS</a>
+            <a class="nav-link" href="#">{{ $t("secondNavbar.visitUs") | uppercase }}</a>
           </li>
         </ul>
       </div>

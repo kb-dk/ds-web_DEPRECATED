@@ -25,10 +25,20 @@ export const store = new Vuex.Store({
 
 Vue.config.productionTip = false
 
-// Create VueI18n instance with options
 const i18n = new VueI18n({
   locale: 'da',
   messages: Translations
+})
+
+Vue.filter('capitalize', function (value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
+
+Vue.filter('uppercase', function (value) {
+  if (!value) return ''
+  return value.toString().toUpperCase()
 })
 
 new Vue({
