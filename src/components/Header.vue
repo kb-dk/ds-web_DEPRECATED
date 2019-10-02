@@ -13,7 +13,9 @@
             <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click.stop="switchLanguage"><small>In English</small></a>
+            <a class="nav-link" href="#" @click.stop="switchLanguage">
+              <small>{{ $t("firstNavbar.otherLanguage") | capitalize }}</small>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><small>{{ $t("firstNavbar.login") | capitalize }}</small></a>
@@ -75,11 +77,11 @@ import Search from '@/components/Search.vue'
 export default {
   name: 'Header',
   components: {
-    Search,
+    Search
   },
   methods: {
     switchLanguage () {
-      this.$i18n.locale = 'en'
+      this.$i18n.locale = this.$i18n.locale === 'en' ? 'da' : 'en'
     }
   }
 }
