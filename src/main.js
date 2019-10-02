@@ -30,20 +30,24 @@ const i18n = new VueI18n({
   messages: Translations
 })
 
-Vue.filter('capitalize', function (value) {
+function uppercase (value) {
+  if (!value) return ''
+  return value.toString().toUpperCase()
+}
+function capitalize (value) {
   if (!value) return ''
   value = value.toString()
   return value.charAt(0).toUpperCase() + value.slice(1)
-})
+}
 
-Vue.filter('uppercase', function (value) {
-  if (!value) return ''
-  return value.toString().toUpperCase()
-})
+Vue.filter('uppercase', uppercase)
+Vue.filter('capitalize', capitalize)
 
 new Vue({
   router,
   store,
   i18n,
+  uppercase,
+  capitalize,
   render: h => h(App)
 }).$mount('#app')

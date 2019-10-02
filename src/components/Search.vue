@@ -12,7 +12,7 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false">
-              <small>Søg i billeder</small>
+              <small>{{ $t("search.searchInPictures") | capitalize }}</small>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -51,7 +51,8 @@ export default {
   },
   methods: {
     submitSearch: function () {
-      alert('Du søgte på: ' + this.searchQuery)
+      console.log(this)
+      alert(capitalize(this.$t('search.youSearchedFor')) + ': ' + this.searchQuery)
     }
   }
 
