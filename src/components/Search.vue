@@ -52,7 +52,7 @@ export default {
   methods: {
     submitSearch: function () {
       console.log(this)
-      alert(capitalize(this.$t('search.youSearchedFor')) + ': ' + this.searchQuery)
+      alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor')) + ': ' + this.searchQuery)
     }
   }
 

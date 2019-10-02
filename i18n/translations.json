@@ -4,7 +4,8 @@
       "loans": "loans",
       "openingHours": "opening hours",
       "aboutRoyalLibrary": "about The Royal Library",
-      "login": "login"
+      "login": "login",
+      "otherLanguage": "på Dansk"
     },
     "secondNavbar": {
       "findMaterial": "find material",
@@ -14,7 +15,8 @@
       "visitUs": "visit us"
     },
     "search": {
-      "searchInPictures": "search in pictures"
+      "searchInPictures": "search in pictures",
+      "youSearchedFor": "you searched for"
     }
   },
   "da": {
@@ -22,7 +24,8 @@
       "loans": "udlån",
       "openingHours": "åbningstider",
       "aboutRoyalLibrary": "om Det Kgl. Bibliotek",
-      "login": "log ind"
+      "login": "log ind",
+      "otherLanguage": "in English"
     },
     "secondNavbar": {
       "findMaterial": "find materiale",
@@ -32,7 +35,8 @@
       "visitUs": "besøg os"
     },
     "search": {
-      "searchInPictures": "søg i billeder"
+      "searchInPictures": "søg i billeder",
+      "youSearchedFor": "du søgte på"
     }
   }
 }

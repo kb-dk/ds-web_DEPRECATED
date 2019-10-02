@@ -8,5 +8,3 @@ function capitalize (value) {
   return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
-Vue.filter('uppercase', uppercase)
-Vue.filter('capitalize', capitalize)
