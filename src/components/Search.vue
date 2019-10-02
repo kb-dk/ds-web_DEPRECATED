@@ -33,7 +33,7 @@
           <button
             class="btn btn-outline-secondary border-left-0 border bg-light shadow-none"
             type="submit">
-            Søg
+            {{ $t("search.search") | capitalize({ onlyFirstLetter: true }) }}
           </button>
         </span>
       </div>
