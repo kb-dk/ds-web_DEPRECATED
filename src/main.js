@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
+import Vue2Filters from 'vue2-filters'
 import VueI18n from 'vue-i18n'
 import Translations from '../i18n/translations.json'
-
 import App from './App.vue'
+
 import router from './router/router'
 import { search } from './store/search-store'
 import './styles/main.scss'
@@ -14,6 +15,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(VueI18n)
+Vue.use(Vue2Filters)
 
 export const store = new Vuex.Store({
   modules: {
@@ -30,24 +32,10 @@ const i18n = new VueI18n({
   messages: Translations
 })
 
-function uppercase (value) {
-  if (!value) return ''
-  return value.toString().toUpperCase()
-}
-function capitalize (value) {
-  if (!value) return ''
-  value = value.toString()
-  return value.charAt(0).toUpperCase() + value.slice(1)
-}
-
-Vue.filter('uppercase', uppercase)
-Vue.filter('capitalize', capitalize)
-
 new Vue({
   router,
   store,
   i18n,
-  uppercase,
-  capitalize,
+  mixins: [Vue2Filters.mixin],
   render: h => h(App)
 }).$mount('#app')

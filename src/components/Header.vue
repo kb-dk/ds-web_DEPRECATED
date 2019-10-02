@@ -4,21 +4,21 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") | capitalize }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") | capitalize }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" @click.stop="switchLanguage">
-              <small>{{ $t("firstNavbar.otherLanguage") | capitalize }}</small>
+              <small>{{ $t("firstNavbar.otherLanguage") | capitalize({ onlyFirstLetter: true }) }}</small>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.login") | capitalize }}</small></a>
+            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.login") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
         </ul>
       </div>
