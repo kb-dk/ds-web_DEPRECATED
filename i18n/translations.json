@@ -14,9 +14,15 @@
       "arrangements": "arrangements",
       "visitUs": "visit us"
     },
+    "thirdNavbar": {
+      "all": "all",
+      "booksAndMagazines": "books and magazines",
+      "pictures": "pictures"
+    },
     "search": {
       "searchInPictures": "search in pictures",
-      "youSearchedFor": "you searched for"
+      "youSearchedFor": "you searched for",
+      "search": "search"
     }
   },
   "da": {
@@ -34,9 +40,15 @@
       "arrangements": "arrangementer",
       "visitUs": "besøg os"
     },
+    "thirdNavbar": {
+      "all": "alt",
+      "booksAndMagazines": "bøger og tidsskrifter",
+      "pictures": "billeder"
+    },
     "search": {
       "searchInPictures": "søg i billeder",
-      "youSearchedFor": "du søgte på"
+      "youSearchedFor": "du søgte på",
+      "search": "søg"
     }
   }
 }
