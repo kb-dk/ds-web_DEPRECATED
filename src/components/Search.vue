@@ -12,7 +12,7 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false">
-              <small>{{ $t("search.searchInPictures") | capitalize }}</small>
+              <small>{{ $t("search.searchInPictures") | capitalize({ onlyFirstLetter: true }) }}</small>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -51,8 +51,7 @@ export default {
   },
   methods: {
     submitSearch: function () {
-      console.log(this)
-      alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor')) + ': ' + this.searchQuery)
+      alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor'), { onlyFirstLetter: true }) + ': ' + this.searchQuery)
     }
   }
 
