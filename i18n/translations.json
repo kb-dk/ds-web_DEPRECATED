@@ -12,6 +12,9 @@
       "services": "services",
       "arrangements": "arrangements",
       "visitUs": "visit us"
+    },
+    "search": {
+      "searchInPictures": "search in pictures"
     }
   },
   "da": {
@@ -27,6 +30,9 @@
       "services": "services",
       "arrangements": "arrangementer",
       "visitUs": "besøg os"
+    },
+    "search": {
+      "searchInPictures": "søg i billeder"
     }
   }
 }
