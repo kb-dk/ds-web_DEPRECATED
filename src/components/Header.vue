@@ -13,7 +13,7 @@
             <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click.stop="switchLanguage">
+            <a class="nav-link" href="#" @click.stop="toggleLanguage">
               <small>{{ $t("firstNavbar.otherLanguage") | capitalize({ onlyFirstLetter: true }) }}</small>
             </a>
           </li>
@@ -73,6 +73,7 @@
 
 <script>
 import Search from '@/components/Search.vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Header',
@@ -80,8 +81,11 @@ export default {
     Search
   },
   methods: {
-    switchLanguage () {
-      this.$i18n.locale = this.$i18n.locale === 'en' ? 'da' : 'en'
+    ...mapActions('lang', ['setLang']),
+
+    toggleLanguage: function () {
+      var newLang = this.$i18n.locale === 'en' ? 'da' : 'en'
+      this.setLang(newLang)
     }
   }
 }
