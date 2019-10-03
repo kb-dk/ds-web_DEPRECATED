@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
-import Vue2Filters from 'vue2-filters'
-import VueI18n from 'vue-i18n'
-import Translations from '../i18n/translations.json'
+
+import i18n from './i18n-setup.js'
 import App from './App.vue'
 
 import router from './router/router'
@@ -14,8 +13,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
-Vue.use(VueI18n)
-Vue.use(Vue2Filters)
 
 export const store = new Vuex.Store({
   modules: {
@@ -27,15 +24,9 @@ export const store = new Vuex.Store({
 
 Vue.config.productionTip = false
 
-const i18n = new VueI18n({
-  locale: 'da',
-  messages: Translations
-})
-
 new Vue({
   router,
   store,
   i18n,
-  mixins: [Vue2Filters.mixin],
   render: h => h(App)
 }).$mount('#app')
