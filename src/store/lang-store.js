@@ -1,5 +1,5 @@
 import { app } from '../main'
-// import axios from 'axios'
+import axios from 'axios'
 
 export const SET_LANG = 'SET_LANG'
 
@@ -21,9 +21,9 @@ const actions = {
       commit(SET_LANG, payload)
     } else {
       try {
-        // const res = await axios.get(`@/lang/locale/${payload}.json`)
+        const res = await axios.get(`/locale/${payload}.json`)
         // const res = await axios.get(`../../src/lang/${payload}.json`)
-        const res = await import(`@/lang/locale/${payload}.json`)
+        // const res = await import(`@/lang/locale/${payload}.json`)
         app.$i18n.setLocaleMessage(payload, res.data)
         commit(SET_LANG, payload)
       } catch (e) {
