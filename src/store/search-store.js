@@ -5,7 +5,8 @@ const state = {
 }
 
 const actions = {
-  doSearch ({ commit }, params) {
+  async doSearch ({ commit }, params) {
+    console.log(params)
     commit('doSearchSuccess')
     searchService
       .search(params)

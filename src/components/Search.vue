@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'Search',
   data () {
@@ -49,10 +51,17 @@ export default {
       searchQuery: ''
     }
   },
+  computed: {
+    ...mapState({
+      searchResult: state => state.search.all.searchResult
+    })
+  },
   methods: {
+    ...mapActions('search', ['doSearch']),
     submitSearch: function () {
-      alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor'), { onlyFirstLetter: true }) + ': ' + this.searchQuery)
+      this.doSearch(this.searchQuery)
     }
+    // alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor'), { onlyFirstLetter: true }) + ': ' + this.searchQuery)
   }
 
 }
