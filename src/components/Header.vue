@@ -13,7 +13,7 @@
             <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize({ onlyFirstLetter: true }) }}</small></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click.stop="toggleLanguage">
+            <a class="nav-link" href="#" v-on:click="toggleLanguage">
               <small>{{ $t("firstNavbar.otherLanguage") | capitalize({ onlyFirstLetter: true }) }}</small>
             </a>
           </li>
