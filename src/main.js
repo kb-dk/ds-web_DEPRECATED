@@ -18,7 +18,3 @@ export const app = new Vue({
   i18n,
   render: h => h(App)
 }).$mount('#app')
-
-// DEBUG:
-window['vue'] = app
-window.store = store
