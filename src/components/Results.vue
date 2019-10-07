@@ -5,8 +5,10 @@
       <div class="col-md-4" />
       <div class="col-md-8">
         <vue-json-pretty
+          v-if="searchResult"
           :path="'res'"
-          :data="searchResult" />
+          :data="searchResult"
+          :highlightMouseoverNode="true" />
       </div>
     </div>
   </div>
