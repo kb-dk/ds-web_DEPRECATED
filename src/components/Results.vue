@@ -1,6 +1,6 @@
 <template>
-  <div class="container" style="margin-top: 20px">
-    <div v-if="searchResult" class="row">
+  <div class="container-fluid">
+    <div v-if="searchResult" class="row results">
       <div class="col-4">
         <vue-json-pretty
           :path="'res'"
@@ -11,8 +11,8 @@
         <div class="card-columns">
           <div v-for="result in searchResult.response.docs"
                :key="result.id"
-               class="card">
-            <img :src="getImage()" class="card-image-top">
+               class="card mb-4">
+            <img :src="getImage()" class="card-image-top img-fluid">
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     getImage: function () {
-      return 'https://picsum.photos/230/' + Math.floor((Math.random() * 100) + 50)
+      return 'https://picsum.photos/600/' + Math.floor((Math.random() * 300) + 100)
     }
   }
 }
