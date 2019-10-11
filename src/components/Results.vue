@@ -9,7 +9,9 @@
       </div>
       <div class="col-8">
         <div class="card-columns">
-          <div class="card" v-for="(result, index) in 20" :key="index">
+          <div v-for="result in searchResult.response.docs"
+               :key="result.id"
+               class="card">
             <img :src="getImage()" class="card-image-top">
           </div>
         </div>
