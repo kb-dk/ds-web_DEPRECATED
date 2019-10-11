@@ -1,14 +1,18 @@
 <template>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4" />
-      <div class="col-md-8">
+  <div class="container" style="margin-top: 20px">
+    <div v-if="searchResult" class="row">
+      <div class="col-4">
         <vue-json-pretty
-          v-if="searchResult"
           :path="'res'"
           :data="searchResult"
-          :highlightMouseoverNode="true" />
+          :highlight-mouseover-node="true" />
+      </div>
+      <div class="col-8">
+        <div class="card-columns">
+          <div class="card" v-for="(result, index) in 20" :key="index">
+            <img :src="getImage()" class="card-image-top">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -24,10 +28,20 @@ export default {
   components: {
     VueJsonPretty
   },
+  data () {
+    return {
+      selectedImage: ''
+    }
+  },
   computed: {
     ...mapState({
       searchResult: state => state.search.all.searchResult
     })
+  },
+  methods: {
+    getImage: function () {
+      return 'https://picsum.photos/230/' + Math.floor((Math.random() * 100) + 50)
+    }
   }
 }
 </script>
