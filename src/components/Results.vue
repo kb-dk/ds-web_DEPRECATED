@@ -32,11 +32,6 @@ export default {
   components: {
     VueJsonPretty
   },
-  data () {
-    return {
-      selectedImage: ''
-    }
-  },
   computed: {
     ...mapState({
       searchResult: state => state.search.all.searchResult
