@@ -12,7 +12,9 @@
           <div v-for="result in searchResult.response.docs"
                :key="result.id"
                class="card mb-4">
-            <img :src="getImage()" class="card-image-top img-fluid">
+            <router-link :to="`/view/${result.id}`">
+              <img :src="getImage()" class="card-image-top img-fluid">
+            </router-link>
           </div>
         </div>
       </div>
