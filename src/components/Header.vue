@@ -25,8 +25,8 @@
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="images/kb_logo_small.png" alt="">
-        <img src="images/kb_logo_text_da.png" height="60px" alt="">
+        <img src="@/assets/img/kb_logo_small.png" alt="">
+        <img src="@/assets/img/kb_logo_text_da.png" height="60px" alt="">
       </a>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
