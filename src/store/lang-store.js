@@ -16,7 +16,8 @@ const actions = {
       commit('setLanguage', params)
     } else {
       try {
-        const res = await axios.get(`/locale/${params}.json`)
+        // We need to now the right context before we can hit the right path
+        const res = await axios.get(`${process.env.BASE_URL}locale/${params}.json`)
         app.$i18n.setLocaleMessage(params, res.data)
         commit('setLanguage', params)
       } catch (e) {
