@@ -1,44 +1,20 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <form class="mx-2 my-auto d-inline w-100" @submit.prevent="submitSearch">
-      <div class="input-group search-group">
-        <span class="input-group-prepend">
-          <div class="dropdown">
-            <a
-              id="dropdownMenuLink"
-              class="btn btn-secondary dropdown-toggle border-right-0 border text-secondary bg-white shadow-none"
-              href="#"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false">
-              <small>{{ $t("search.searchInPictures") | capitalize({ onlyFirstLetter: true }) }}</small>
-            </a>
+  <form
+    class="form-wrapper search-area"
+    @submit.prevent="submitSearch">
+    <label for="rdl-search-form" class="hidden">{{ $t('search.searchOn') | uppercase }} kb.dk</label>
+    <input
+      id="rdl-search-form"
+      v-model="searchQuery"
+      type="text"
+      placeholder="Søg på KB.dk"
+      class="search-input"
+      aria-describedby="rdl-search-form">
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-        </span>
-        <input
-          id="search-input"
-          v-model="searchQuery"
-          class="form-control py-2 border-right-0 border-left-0 border rounded-0 shadow-none"
-          type="search"
-          placeholder=""
-          autofocus>
-        <span class="input-group-append">
-          <button
-            class="btn btn-outline-secondary border-left-0 border bg-light shadow-none"
-            type="submit">
-            {{ $t("search.search") | capitalize({ onlyFirstLetter: true }) }}
-          </button>
-        </span>
-      </div>
-    </form>
-  </nav>
+    <button alt="search">
+      <i class="icon zmdi-search icon-medium" />
+    </button>
+  </form>
 </template>
 
 <script>
@@ -63,6 +39,5 @@ export default {
     }
     // alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor'), { onlyFirstLetter: true }) + ': ' + this.searchQuery)
   }
-
 }
 </script>
