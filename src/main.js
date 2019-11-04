@@ -4,7 +4,7 @@ import i18n from './lang'
 import store from './store'
 import router from './router/router'
 import './styles/main.scss'
-import '../public/assets/css/style.css'
+import './assets/css/style.css'
 
 Vue.config.productionTip = false
 
