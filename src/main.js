@@ -1,14 +1,10 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
 import App from './App.vue'
 import i18n from './lang'
 import store from './store'
 import router from './router/router'
 import './styles/main.scss'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-Vue.use(BootstrapVue)
+import './assets/css/style.css'
 
 Vue.config.productionTip = false
 

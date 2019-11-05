@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     getImage: function () {
-      return 'https://picsum.photos/600/' + Math.floor((Math.random() * 300) + 100)
+      return 'https://picsum.photos/500/' + Math.floor((Math.random() * 300) + 100)
     }
   }
 }

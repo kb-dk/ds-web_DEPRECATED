@@ -21,6 +21,7 @@
   "search": {
     "searchInPictures": "search in pictures",
     "youSearchedFor": "you searched for",
-    "search": "search"
+    "search": "search",
+    "searchOn": "search on"
   }
 }

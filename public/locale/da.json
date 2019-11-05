@@ -21,6 +21,7 @@
   "search": {
     "searchInPictures": "søg i billeder",
     "youSearchedFor": "du søgte på",
-    "search": "søg"
+    "search": "søg",
+    "searchOn": "søg på"
   }
 }

@@ -1,84 +1,128 @@
 <template>
-  <div class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.loans") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.openingHours") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.aboutRoyalLibrary") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" @click="toggleLanguage">
-              <small>{{ $t("firstNavbar.otherLanguage") | capitalize({ onlyFirstLetter: true }) }}</small>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><small>{{ $t("firstNavbar.login") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-        </ul>
+  <header class="rdl-header position-relative">
+    <div class="inner-content grid-container">
+      <div class="grid-x">
+        <div class="small-6 large-3 cell">
+          <div class="logo">
+            <a class="show-for-medium" href="/">&nbsp;</a>
+          </div>
+        </div>
+        <div class="small-6 hide-for-large cell">
+          <div
+            class="rdl-hamburger-menu box flex-container align-right align-middle">
+            <div class="hamburger-menu">
+              <span class="line" />
+              <span class="line" />
+              <span class="line" />
+            </div>
+          </div>
+        </div>
+        <div class="show-for-large medium-9 cell navs">
+          <nav class="top-nav">
+            <ul>
+              <li><a href="">{{ $t('firstNavbar.loans') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+              <li><a href="">{{ $t('firstNavbar.openingHours') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+              <li><a href="">{{ $t('firstNavbar.aboutRoyalLibrary') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+              <li><a href="#" @click="toggleLanguage">{{ $t('firstNavbar.otherLanguage') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+              <li>
+                <a id="loginBtn"
+                   href="">{{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="">{{ $t('secondNavbar.findMaterial') | uppercase }}</a></li>
+              <li><a href="">{{ $t('secondNavbar.inspiration') | uppercase }}</a></li>
+              <li><a href="">{{ $t('secondNavbar.services') | uppercase }}</a></li>
+              <li><a href="">{{ $t('secondNavbar.arrangements') | uppercase }}</a></li>
+              <li><a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a></li>
+              <li>
+                <button id="searchBtn" alt="search">
+                  <i class="icon zmdi-search icon-medium" />
+
+                  <i class="icon zmdi-close icon-medium" />
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="@/assets/img/kb_logo_small.png" alt="">
-        <img src="@/assets/img/kb_logo_text_da.png" height="60px" alt="">
-      </a>
-      <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ $t("secondNavbar.findMaterial") | uppercase }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ $t("secondNavbar.inspiration") | uppercase }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ $t("secondNavbar.services") | uppercase }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ $t("secondNavbar.arrangements") | uppercase }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ $t("secondNavbar.visitUs") | uppercase }}</a>
-          </li>
-        </ul>
+      <div class="top-menu">
+        <div class="rdl-search-form rdl-search-form-top-menu collapsed">
+          <Search />
+        </div>
       </div>
-    </nav>
-    <Search />
-    <br>
-    <nav class="navbar navbar-expand-lg navbar-light third-navbar">
-      <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-left">
-          <li class="nav-item">
-            <a class="nav-link py-0 text-dark text-center" href="#"><small>{{ $t("thirdNavbar.all") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link py-0 text-dark text-center" href="#"><small>{{ $t("thirdNavbar.booksAndMagazines") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link py-0 text-dark text-center" href="#"><small>{{ $t("thirdNavbar.pictures") | capitalize({ onlyFirstLetter: true }) }}</small></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link py-0 text-dark text-center" href="#"><small>Kb.dk</small></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    </div>
+
+    <div class="hide-for-large">
+      <nav class="mobile-menu theme-bg">
+        <div class="main">
+          <div class="inner-content grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="cell">
+                <ul>
+                  <li><a href="#">{{ $t('secondNavbar.findMaterial') | uppercase }}</a></li>
+                  <li><a href="#">{{ $t('secondNavbar.inspiration') | uppercase }}</a></li>
+                  <li><a href="#">{{ $t('secondNavbar.services') | uppercase }}</a></li>
+                  <li><a href="##">{{ $t('secondNavbar.arrangements') | uppercase }}</a></li>
+                  <li><a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a></li>
+                  <li id="searchText" class="search">
+                    <a href="#">{{ $t('search.searchOn') | uppercase }} kb.dk</a>
+                    <div class="action">
+                      <i class="icon zmdi-search icon-small" />
+                    </div>
+                  </li>
+                </ul>
+                <div class="collapsable mobile-search-area collapsed">
+                  <div class="rdl-search-form rdl-search-form-simple">
+                    <SearchMobile />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondary">
+          <div class="inner-content grid-container">
+            <div class="grid-x grid-padding-x grid-padding-y">
+              <div class="cell">
+                <ul>
+                  <li><a href="">{{ $t('firstNavbar.loans') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+                  <li><a href="">{{ $t('firstNavbar.openingHours') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+                  <li><a href="">{{ $t('firstNavbar.aboutRoyalLibrary') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+                  <li><a href="#" @click="toggleLanguage">{{ $t('firstNavbar.otherLanguage') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+                  <li>
+                    <a id="loginBtn"
+                       href="">{{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 </template>
 
 <script>
-import Search from '@/components/Search.vue'
 import { mapActions } from 'vuex'
+import Search from '@/components/Search.vue'
+import SearchMobile from '@/components/SearchMobile.vue'
 
 export default {
   name: 'Header',
   components: {
-    Search
+    Search,
+    SearchMobile
+  },
+  mounted () {
+    let scripts = document.createElement('script')
+    scripts.setAttribute('src', 'assets/js/scripts.js')
+    document.body.appendChild(scripts)
   },
   methods: {
     ...mapActions('lang', ['setLang']),
