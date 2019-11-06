@@ -1,8 +1,7 @@
-const test = () => {
+const onReady = () => {
   const menubtn = document.querySelectorAll('.hamburger-menu')[0]
   const menuSearchBtn = document.querySelector('#searchBtn')
   const loginButton = document.querySelector('#loginBtn')
-  console.log('foo')
   if (menubtn) {
     menubtn.onclick = () => {
       document.body.classList.toggle('menu-open')
@@ -15,7 +14,7 @@ const test = () => {
         .querySelector('.top-menu .form-wrapper')
         .classList.toggle('collapsed')
       document.body.classList.toggle('menu-search-open')
-      $('.form-wrapper input').focus()
+      document.querySelector('.form-wrapper input').focus()
     }
   }
 
@@ -25,16 +24,13 @@ const test = () => {
       document.body.classList.toggle('login-open')
     }
   }
-}
 
-const toggleMobileSearch = (e) => {
-  console.log('bar')
-
-  /*
-  e.preventDefault()
-  document.querySelector('.mobile-search-area').classList.toggle('collapsed')
-  document.getElementById('searchText').classList.toggle('hide')
-  document.querySelector('.mobile-search-area input').focus()
+  const toggleMobileSearch = (e) => {
+    e.preventDefault()
+    document.querySelector('.mobile-search-area').classList.toggle('collapsed')
+    document.getElementById('searchText').classList.toggle('hide')
+    document.querySelector('.mobile-search-area input').focus()
+  }
 
   if (document.querySelector('#searchText')) {
     document.querySelector('#searchText').onclick = toggleMobileSearch
@@ -42,7 +38,5 @@ const toggleMobileSearch = (e) => {
       '.mobile-search-area button'
     ).onclick = toggleMobileSearch
   }
-  */
 }
-
-export default { test, toggleMobileSearch }
+export default { onReady }
