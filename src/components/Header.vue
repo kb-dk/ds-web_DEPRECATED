@@ -112,6 +112,7 @@
 import { mapActions } from 'vuex'
 import Search from '@/components/Search.vue'
 import SearchMobile from '@/components/SearchMobile.vue'
+import h from '../assets/js/header.es6'
 
 export default {
   name: 'Header',
@@ -120,9 +121,10 @@ export default {
     SearchMobile
   },
   mounted () {
-    let scripts = document.createElement('script')
-    scripts.setAttribute('src', 'assets/js/scripts.js')
-    document.body.appendChild(scripts)
+    h.test()
+    // let scripts = document.createElement('script')
+    // scripts.setAttribute('src', 'assets/js/scripts.js')
+    // document.body.appendChild(scripts)
   },
   methods: {
     ...mapActions('lang', ['setLang']),
