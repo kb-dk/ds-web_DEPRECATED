@@ -112,7 +112,7 @@
 import { mapActions } from 'vuex'
 import Search from '@/components/Search.vue'
 import SearchMobile from '@/components/SearchMobile.vue'
-import h from '../assets/js/header.es6'
+import h from '../assets/js/header.js'
 
 export default {
   name: 'Header',
@@ -122,6 +122,7 @@ export default {
   },
   mounted () {
     h.test()
+    h.toggleMobileSearch()
     // let scripts = document.createElement('script')
     // scripts.setAttribute('src', 'assets/js/scripts.js')
     // document.body.appendChild(scripts)
