@@ -122,9 +122,6 @@ export default {
   },
   mounted () {
     header.onReady()
-    // let scripts = document.createElement('script')
-    // scripts.setAttribute('src', 'assets/js/scripts.js')
-    // document.body.appendChild(scripts)
   },
   methods: {
     ...mapActions('lang', ['setLang']),
