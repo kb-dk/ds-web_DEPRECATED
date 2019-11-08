@@ -23,5 +23,10 @@
     "youSearchedFor": "you searched for",
     "search": "search",
     "searchOn": "search on"
+  },
+  "filters": {
+    "access": "access",
+    "year": "year",
+    "locality": "locality"
   }
 }

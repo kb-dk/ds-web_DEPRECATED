@@ -23,5 +23,10 @@
     "youSearchedFor": "du søgte på",
     "search": "søg",
     "searchOn": "søg på"
+  },
+  "filters": {
+    "access": "adgang",
+    "year": "årstal",
+    "locality": "Lokalitet"
   }
 }
