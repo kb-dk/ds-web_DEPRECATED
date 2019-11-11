@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="divider theme-color top-left" />
-    <div class="rdl-grid-container-wrapper position-relative" v-if="searchResult">
+    <div v-if="searchResult" class="rdl-grid-container-wrapper position-relative">
       <div class="inner-content grid-container">
         <div class="grid-x grid-margin-x grid-padding-y">
           <div class="cell small-12">
@@ -30,24 +30,16 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div v-if="searchResult" class="row results">
-        <div class="col-4">
+    <div v-if="searchResult" class="inner-content grid-container">
+      <div class="grid-x grid-margin-x grid-padding-y">
+        <div class="cell small-12 medium-4">
           <vue-json-pretty
             :path="'res'"
             :data="searchResult"
             :highlight-mouseover-node="true" />
         </div>
-        <div class="col-8">
-          <div class="card-columns">
-            <div v-for="result in searchResult.response.docs"
-                 :key="result.id"
-                 class="card mb-4">
-              <router-link :to="`/view/${result.id}`">
-                <img :src="getImage()" class="card-image-top img-fluid">
-              </router-link>
-            </div>
-          </div>
+        <div class="grid-x grid-margin-x small-12 medium-8">
+          <CardColumns />
         </div>
       </div>
     </div>
@@ -58,11 +50,13 @@
 
 import { mapState } from 'vuex'
 import VueJsonPretty from 'vue-json-pretty'
+import CardColumns from '@/components/CardColumns.vue'
 
 export default {
   name: 'Results',
   components: {
-    VueJsonPretty
+    VueJsonPretty,
+    CardColumns
   },
   computed: {
     ...mapState({
@@ -71,7 +65,7 @@ export default {
   },
   methods: {
     getImage: function () {
-      return 'https://picsum.photos/500/' + Math.floor((Math.random() * 300) + 100)
+      return 'https://picsum.photos/300/' + Math.floor((Math.random() * 300) + 100)
     }
   }
 }
