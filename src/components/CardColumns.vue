@@ -13,3 +13,21 @@
     </div>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  name: 'CardColumns',
+  computed: {
+    ...mapState({
+      searchResult: state => state.search.all.searchResult
+    })
+  },
+  methods: {
+    getImage: function () {
+      return 'https://picsum.photos/300/' + Math.floor((Math.random() * 300) + 100)
+    }
+  }
+}
+</script>
