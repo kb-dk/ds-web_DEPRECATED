@@ -4,7 +4,7 @@
     <div v-if="searchResult" class="rdl-grid-container-wrapper position-relative">
       <div class="inner-content grid-container">
         <div class="grid-x grid-margin-x grid-padding-y">
-          <div class="cell small-12">
+          <div class="cell small-8">
             <h2 class="h1">
               {{ searchResult.response.docs.length }} resultater på &#039;{{ searchResult.responseHeader.params.q }}&#039;
             </h2>
@@ -18,6 +18,8 @@
                      class="filter-btn filter-btn">{{ $t('filters.year') | capitalize({ onlyFirstLetter: true }) }}</a>
                   <a href="#filter=locality"
                      class="filter-btn filter-btn">{{ $t('filters.locality') | capitalize({ onlyFirstLetter: true }) }}</a>
+                  <a href="#filter=online"
+                     class="filter-btn filter-btn">{{ $t('filters.online') | capitalize({ onlyFirstLetter: true }) }}</a>
                   <div class="show
 -more show-for-small-only">
                     <span class="more-text">Vis flere filtre</span>
@@ -26,6 +28,19 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="cell small-4">
+            <select>
+              <option value="gallery">
+                {{ $t('viewOptions.gallery') | capitalize({ onlyFirstLetter: true }) }}
+              </option>
+            </select>
+
+            <select>
+              <option value="">
+                {{ $t('viewOptions.sortBy') | capitalize({ onlyFirstLetter: true }) }}
+              </option>
+            </select>
           </div>
         </div>
       </div>

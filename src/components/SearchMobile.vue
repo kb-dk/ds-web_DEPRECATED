@@ -8,7 +8,7 @@
       id="rdl-search-form"
       v-model="searchQuery"
       type="text"
-      placeholder="Søg kb.dk"
+      placeholder=""
       class="search-input"
       aria-describedby="rdl-search-form">
 
