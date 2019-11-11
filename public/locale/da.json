@@ -27,6 +27,11 @@
   "filters": {
     "access": "adgang",
     "year": "årstal",
-    "locality": "Lokalitet"
+    "locality": "Lokalitet",
+    "online": "tilgængelig online"
+  },
+  "viewOptions": {
+    "gallery": "Gallerivisning",
+    "sortBy": "Sorter efter"
   }
 }

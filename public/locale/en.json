@@ -27,6 +27,11 @@
   "filters": {
     "access": "access",
     "year": "year",
-    "locality": "locality"
+    "locality": "locality",
+    "online": "available online"
+  },
+  "viewOptions": {
+    "gallery": "Gallery",
+    "sortBy": "Sort by"
   }
 }
