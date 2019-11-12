@@ -4,7 +4,7 @@
          :key="result.id"
          class="masonry-css-item">
       <router-link :to="`/view/${result.id}`">
-        <img :src="getImage()" class="card-image-top img-fluid">
+        <img :src="result.image_preview" class="card-image-top img-fluid">
       </router-link>
     </div>
   </div>
@@ -19,11 +19,6 @@ export default {
     ...mapState({
       searchResult: state => state.search.all.searchResult
     })
-  },
-  methods: {
-    getImage: function () {
-      return 'https://picsum.photos/300/' + Math.floor((Math.random() * 300) + 100)
-    }
   }
 }
 </script>
