@@ -53,7 +53,7 @@
             :data="searchResult"
             :highlight-mouseover-node="true" />
         </div>
-        <div class="grid-x grid-margin-x small-12 medium-8">
+        <div class="cell small-12 medium-8">
           <CardColumns />
         </div>
       </div>
