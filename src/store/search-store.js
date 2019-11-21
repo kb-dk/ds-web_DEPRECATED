@@ -11,6 +11,13 @@ const actions = {
       .search(params)
       .then(searchResult => commit('doSearchSuccess', searchResult), error =>
         commit('doSearchError', error))
+  },
+  doImageLookup ({ commit }, params) {
+    commit('doImageLookupSuccess')
+    searchService
+      .lookup(params)
+      .then(imageResult => commit('doImageLookupSuccess', imageResult), error =>
+        commit('doImageLookupError', error))
   }
 }
 
@@ -19,6 +26,12 @@ const mutations = {
     state.all = { searchResult }
   },
   doSearchError (state, error) {
+    state.all = { error }
+  },
+  doImageLookupSuccess (state, imageResult) {
+    state.all = { imageResult }
+  },
+  doImageLookupError (state, error) {
     state.all = { error }
   }
 }
