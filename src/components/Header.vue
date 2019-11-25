@@ -51,7 +51,7 @@
       </div>
       <div class="top-menu">
         <div class="rdl-search-form rdl-search-form-top-menu collapsed">
-          <Search />
+          <SearchBox />
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@
                 </ul>
                 <div class="collapsable mobile-search-area collapsed">
                   <div class="rdl-search-form rdl-search-form-simple">
-                    <SearchMobile />
+                    <SearchBox :is-mobile="true" />
                   </div>
                 </div>
               </div>
@@ -110,16 +110,15 @@
 
 <script>
 import { mapActions } from 'vuex'
-import Search from '@/components/Search.vue'
-import SearchMobile from '@/components/SearchMobile.vue'
+import SearchBox from '@/components/SearchBox.vue'
 import header from '../assets/js/header.js'
 
 export default {
   name: 'Header',
   components: {
-    Search,
-    SearchMobile
+    SearchBox
   },
+
   mounted () {
     header.onReady()
   },
