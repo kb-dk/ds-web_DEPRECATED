@@ -124,11 +124,11 @@ export default {
     header.onReady()
   },
   methods: {
-    ...mapActions('lang', ['setLang']),
+    ...mapActions('lang', ['setLanguage']),
 
     toggleLanguage: function () {
       var newLang = this.$i18n.locale === 'en' ? 'da' : 'en'
-      this.setLang(newLang)
+      this.setLanguage(newLang)
     }
   }
 }
