@@ -6,23 +6,27 @@ export const state = {
 }
 
 const mutations = {
-  setLanguageSuccess (state, params) {
-    app.$i18n.locale = params
-    // app.$i18n.setLocaleMessage(params, res.data)
+  setLanguageSuccess (state, resp) {
+    if (resp.langData === null) {
+      app.$i18n.locale = resp.lang
+    } else {
+      app.$i18n.setLocaleMessage(resp.lang, resp.langData)
+      app.$i18n.locale = resp.lang
+    }
   },
   setLanguageError (state, error) {
     state.all = { error }
   }
 }
 const actions = {
-  setLanguage ({ commit }, params) {
-    if (params in app.$i18n.messages) {
-      commit('setLanguageSuccess', params)
-    } else {
+  setLanguage ({ commit }, newLang) {
+    if (!(newLang in app.$i18n.messages)) {
       languageService
-        .setLanguage(params)
-        .then(languageResult => commit('setLanguageSuccess', languageResult), error =>
+        .setLanguage(newLang)
+        .then(languageResult => commit('setLanguageSuccess', { langData: languageResult, lang: newLang }), error =>
           commit('setLanguageError', error))
+    } else {
+      commit('setLanguageSuccess', { langData: null, lang: newLang })
     }
   }
 }
