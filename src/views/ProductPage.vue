@@ -47,7 +47,6 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 import Aside from '@/components/Aside.vue'
 import ProductHeading from '@/components/ProductHeading.vue'
 import ProductArticle from '@/components/ProductArticle.vue'
@@ -57,7 +56,6 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'ProductPage',
   components: {
-    Header,
     Aside,
     ProductHeading,
     ProductArticle,
