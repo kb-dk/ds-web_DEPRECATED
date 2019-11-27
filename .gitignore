@@ -9,6 +9,9 @@ node_modules
 # Vue proxy conf
 vue.config.js
 
+# Script to deploy to devel server
+deployToDevel.sh
+
 # Log files
 npm-debug.log*
 yarn-debug.log*
