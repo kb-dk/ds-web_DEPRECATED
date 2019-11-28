@@ -1,28 +1,32 @@
 import { app } from '../main'
-import axios from 'axios'
+import { languageService } from '../services/language-service'
 
 export const state = {
   lang: 'da'
 }
 
 const mutations = {
-  'setLanguage' (state, params) {
-    app.$i18n.locale = params
+  setLanguageSuccess (state, resp) {
+    if (resp.langData === null) {
+      app.$i18n.locale = resp.lang
+    } else {
+      app.$i18n.setLocaleMessage(resp.lang, resp.langData)
+      app.$i18n.locale = resp.lang
+    }
+  },
+  setLanguageError (state, error) {
+    state.all = { error }
   }
 }
 const actions = {
-  async setLang ({ commit }, params) {
-    if (params in app.$i18n.messages) {
-      commit('setLanguage', params)
+  setLanguage ({ commit }, newLang) {
+    if (!(newLang in app.$i18n.messages)) {
+      languageService
+        .setLanguage(newLang)
+        .then(languageResult => commit('setLanguageSuccess', { langData: languageResult, lang: newLang }), error =>
+          commit('setLanguageError', error))
     } else {
-      try {
-        // We need to now the right context before we can hit the right path
-        const res = await axios.get(`${process.env.BASE_URL}locale/${params}.json`)
-        app.$i18n.setLocaleMessage(params, res.data)
-        commit('setLanguage', params)
-      } catch (e) {
-        console.log(e)
-      }
+      commit('setLanguageSuccess', { langData: null, lang: newLang })
     }
   }
 }
