@@ -1,64 +1,50 @@
 <template>
   <div>
-    <<<<<<< HEAD
-    <Header />
     <main>
-      <div class="rdl-bread-crumb-wrapper position-relative  show-for-large">
-        =======
-        <main>
-          <div class="rdl-bread-crumb-wrapper position-relative show-for-large">
-            >>>>>>> develop
-            <div class="inner-content grid-container">
-              <div class="grid-x grid-margin-x">
-                <div class="hide-for-small-only cell small-12">
-                  <div class="bread-crumb">
-                    <i class="icon zmdi-home icon-xsmall" />
-                    <a href="/">Forside</a>
-                  </div>
-                </div>
+      <div class="rdl-bread-crumb-wrapper position-relative show-for-large">
+        <div class="inner-content grid-container">
+          <div class="grid-x grid-margin-x">
+            <div class="hide-for-small-only cell small-12">
+              <div class="bread-crumb">
+                <i class="icon zmdi-home icon-xsmall" />
+                <a href="/">Forside</a>
               </div>
             </div>
           </div>
-
-          <div class="divider theme-color top-left" />
-
-          <div class="rdl-top-container position-relative">
-            <div class="inner-content">
-              <div class="grid-x">
-                <<<<<<< HEAD
-                <div class="cell small-12" />
-                =======
-                <div class="cell large-12" />
-                >>>>>>> develop
-              </div>
-            </div>
-          </div>
-
-          <<<<<<< HEAD
-          <div class="rdl-grid-container-wrapper  position-relative">
-            =======
-            <div class="rdl-grid-container-wrapper position-relative">
-              >>>>>>> develop
-              <div class="inner-content grid-container">
-                <div class="grid-x grid-margin-x grid-padding-y">
-                  <div class="cell show-for-large large-3 aside">
-                    <Aside />
-                  </div>
-                  <div class="cell small-12 large-12">
-                    <ProductHeading :image-result="imageResult" />
-                    <div class="grid-x grid-margin-x grid-padding-y">
-                      <div class="small-12 medium-12 cell">
-                        <ProductArticle :image-result="imageResult" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div></main>
-        <Footer />
+        </div>
       </div>
-</div></main></template>
+
+      <div class="divider theme-color top-left" />
+
+      <div class="rdl-top-container position-relative">
+        <div class="inner-content">
+          <div class="grid-x">
+            <div class="cell large-12" />
+          </div>
+        </div>
+      </div>
+
+      <div class="rdl-grid-container-wrapper position-relative">
+        <div class="inner-content grid-container">
+          <div class="grid-x grid-margin-x grid-padding-y">
+            <div class="cell show-for-large large-3 aside">
+              <Aside />
+            </div>
+            <div class="cell small-12 large-12">
+              <ProductHeading :image-result="imageResult" />
+              <div class="grid-x grid-margin-x grid-padding-y">
+                <div class="small-12 medium-12 cell">
+                  <ProductArticle :image-result="imageResult" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</template>
 
 <script>
 import Aside from '@/components/Aside.vue'
