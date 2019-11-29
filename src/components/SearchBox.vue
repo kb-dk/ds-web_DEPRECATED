@@ -1,7 +1,7 @@
 <template>
   <form v-if="isMobile"
         class="form-wrapper search-area"
-        @submit.prevent="submitSearch">
+        @submit.prevent="submitMobileSearch">
     <label for="rdl-search-form"
            class="hidden">{{ $t('search.search') | uppercase }} kb.dk</label>
     <input
@@ -55,6 +55,10 @@ export default {
   methods: {
     ...mapActions('search', ['doSearch']),
     submitSearch: function () {
+      this.doSearch(this.searchQuery)
+    },
+    submitMobileSearch: function () {
+      document.body.classList.toggle('menu-open')
       this.doSearch(this.searchQuery)
     }
     // alert(this.$options.filters.capitalize(this.$t('search.youSearchedFor'), { onlyFirstLetter: true }) + ': ' + this.searchQuery)
