@@ -31,7 +31,16 @@
     "online": "tilgængelig online"
   },
   "viewOptions": {
-    "gallery": "Gallerivisning",
-    "sortBy": "Sorter efter"
+    "gallery": "gallerivisning",
+    "sortBy": "sorter efter"
+  },
+  "metadata": {
+    "type": {
+      "image": "billede",
+      "moving_image": "video",
+      "sound": "lyd",
+      "text": "tekst",
+      "other": "andet"
+    }
   }
 }
