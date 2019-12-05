@@ -26,7 +26,7 @@ const onReady = () => {
   }
 
   const toggleMobileSearch = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     document.querySelector('.mobile-search-area').classList.toggle('collapsed')
     document.getElementById('searchText').classList.toggle('hide')
     document.querySelector('.mobile-search-area input').focus()
