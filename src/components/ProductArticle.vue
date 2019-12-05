@@ -19,7 +19,7 @@
       <dd>{{ $t('metadata.type.' + imageResult.response.docs[0].type) | capitalize({ onlyFirstLetter: true }) }}</dd>
       <dt>Licens</dt>
       <dd>{{ imageResult.response.docs[0].license }}</dd>
-      <dt>Original størrelse</dt>
+      <dt>Dimension</dt>
       <dd>{{ imageResult.response.docs[0].width_pixels }} x {{ imageResult.response.docs[0].height_pixels }} pixels</dd>
       <dt>Oprettet dato</dt>
       <dd>{{ $d(new Date(imageResult.response.docs[0].created_date), 'long') }}</dd>
