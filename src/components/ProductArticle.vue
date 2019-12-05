@@ -15,7 +15,7 @@
       <dd>{{ imageResult.response.docs[0].author[0] }}</dd>
       <dt>Samling</dt>
       <dd>{{ imageResult.response.docs[0].collection }}</dd>
-      <dt>Type</dt>
+      <dt>Materialetype</dt>
       <dd>{{ $t('metadata.type.' + imageResult.response.docs[0].type) | capitalize({ onlyFirstLetter: true }) }}</dd>
       <dt>Licens</dt>
       <dd>{{ imageResult.response.docs[0].license }}</dd>
