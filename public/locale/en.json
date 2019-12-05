@@ -31,7 +31,16 @@
     "online": "available online"
   },
   "viewOptions": {
-    "gallery": "Gallery",
-    "sortBy": "Sort by"
+    "gallery": "gallery",
+    "sortBy": "sort by"
+  },
+  "metadata": {
+    "type": {
+      "image": "image",
+      "moving_image": "video",
+      "sound": "sound",
+      "text": "text",
+      "other": "other"
+    }
   }
 }

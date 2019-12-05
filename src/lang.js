@@ -11,8 +11,25 @@ const messages = {
   da
 }
 
+const dateTimeFormats = {
+  'da': {
+    short: {
+      year: 'numeric', month: 'short', day: 'numeric'
+    },
+    long: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric'
+    }
+  }
+}
+
 const i18n = new VueI18n({
   locale,
+  dateTimeFormats,
   messages // set locale messages
 })
 
