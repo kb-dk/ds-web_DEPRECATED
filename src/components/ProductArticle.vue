@@ -2,7 +2,7 @@
   <article>
     <figure v-if="imageResult" class="rdl-figure article-center">
       <div class="position-relative">
-        <img :src="imageResult.response.docs[0].image_preview" alt="">
+        <img :src="getImage" alt="">
         <span class="rdl-credits">Foto: Jens Jensen</span>
       </div>
     </figure>
@@ -37,6 +37,9 @@ export default {
   computed: {
     result: function () {
       return this.imageResult.response.docs[0]
+    },
+    getImage: function () {
+      return this.imageResult.response.docs[0].iiif + 'full/!1232,/0/native.jpg'
     }
   }
 }
