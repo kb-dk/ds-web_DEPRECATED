@@ -30,9 +30,12 @@
             </div>
           </div>
           <div class="cell small-4">
-            <select>
+            <select @change="onChange($event)">
               <option value="gallery">
                 {{ $t('viewOptions.gallery') | capitalize({ onlyFirstLetter: true }) }}
+              </option>
+              <option value="list">
+                {{ $t('viewOptions.list') | capitalize({ onlyFirstLetter: true }) }}
               </option>
             </select>
 
@@ -77,6 +80,11 @@ export default {
     ...mapState({
       searchResult: state => state.search.all.searchResult
     })
+  },
+  methods: {
+    onChange (event) {
+      console.log(event.target.value)
+    }
   }
 }
 </script>

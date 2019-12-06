@@ -32,6 +32,7 @@
   },
   "viewOptions": {
     "gallery": "gallerivisning",
+    "list": "listevisning",
     "sortBy": "sorter efter"
   },
   "metadata": {
