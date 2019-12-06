@@ -32,6 +32,7 @@
   },
   "viewOptions": {
     "gallery": "gallery",
+    "list": "list",
     "sortBy": "sort by"
   },
   "metadata": {
