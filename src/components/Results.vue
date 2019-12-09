@@ -49,7 +49,7 @@
       </div>
     </div>
     <div v-if="searchResult" class="inner-content grid-container">
-      <div class="grid-x grid-margin-x grid-padding-y">
+      <div v-if="showType === 'list'" class="grid-x grid-margin-x grid-padding-y">
         <div class="cell small-12 medium-4">
           <vue-json-pretty
             :path="'res'"
@@ -57,6 +57,11 @@
             :highlight-mouseover-node="true" />
         </div>
         <div class="cell small-12 medium-8">
+          <CardColumns />
+        </div>
+      </div>
+      <div v-else-if="showType === 'gallery'" class="grid-x grid-margin-x grid-padding-y">
+        <div class="cell small-12">
           <CardColumns />
         </div>
       </div>
@@ -76,6 +81,11 @@ export default {
     VueJsonPretty,
     CardColumns
   },
+  data () {
+    return {
+      showType: 'gallery'
+    }
+  },
   computed: {
     ...mapState({
       searchResult: state => state.search.all.searchResult
@@ -83,7 +93,7 @@ export default {
   },
   methods: {
     onChange (event) {
-      console.log(event.target.value)
+      this.showType = event.target.value
     }
   }
 }
