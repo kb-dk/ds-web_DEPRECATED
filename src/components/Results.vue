@@ -9,7 +9,7 @@
               {{ searchResult.response.docs.length }} resultater på &#039;{{ searchResult.responseHeader.params.q }}&#039;
             </h2>
 
-            <div class="rdl-filter-btn-group position-relative">
+            <div v-if="showType === 'gallery'" class="rdl-filter-btn-group position-relative">
               <div class="grid-x grid-margin-x">
                 <div class="small-12 cell">
                   <a href="#filter=access"
@@ -51,10 +51,10 @@
     <div v-if="searchResult" class="inner-content grid-container">
       <div v-if="showType === 'list'" class="grid-x grid-margin-x grid-padding-y">
         <div class="cell small-12 medium-4">
-          <vue-json-pretty
-            :path="'res'"
-            :data="searchResult"
-            :highlight-mouseover-node="true" />
+          <div class="callout secondary">
+            <h4>Filtrering</h4>
+            <p>Test</p>
+          </div>
         </div>
         <div class="cell small-12 medium-8">
           <CardColumns />
@@ -72,13 +72,11 @@
 <script>
 
 import { mapState } from 'vuex'
-import VueJsonPretty from 'vue-json-pretty'
 import CardColumns from '@/components/CardColumns.vue'
 
 export default {
   name: 'Results',
   components: {
-    VueJsonPretty,
     CardColumns
   },
   data () {
