@@ -52,8 +52,54 @@
       <div v-if="showType === 'list'" class="grid-x grid-margin-x grid-padding-y">
         <div class="cell small-12 medium-4">
           <div class="callout secondary">
-            <h4>Filtrering</h4>
-            <p>Test</p>
+            <h2>Filtrering</h2>
+            <br>
+            <div class="grid-x grid-padding-x">
+              <div class="cell">
+                <div class="rdl-radio">
+                  <input id="available-online" type="radio" name="availability">
+                  <label for="available-online">Tilgængelig online</label>
+                </div>
+                <div class="rdl-radio">
+                  <input id="available-online-and-physical" type="radio" name="availability">
+                  <label for="available-online-and-physical">Tilgængelig online og fysisk</label>
+                </div>
+                <div class="rdl-radio">
+                  <input id="material-without-copyright" type="radio" name="availability">
+                  <label for="material-without-copyright">Materiale uden ophavsret</label>
+                </div>
+              </div>
+            </div>
+            <div class="rdl-accordion">
+              <div class="section">
+                <h4>
+                  <i class="icon zmdi-arrow-up " />
+                  Kategori
+                </h4>
+                <div class="content">
+                  <div class="rdl-checkbox">
+                    <input id="all-image-types" type="checkbox" name="category">
+                    <label for="all-image-types">Alle typer billeder</label>
+                  </div>
+                  <div class="rdl-checkbox">
+                    <input id="photographs" type="checkbox" name="category">
+                    <label for="photographs">Fotografier</label>
+                  </div>
+                  <div class="rdl-checkbox">
+                    <input id="drawings-and-sketches" type="checkbox" name="category">
+                    <label for="drawings-and-sketches">Tegninger og skitser</label>
+                  </div>
+                  <div class="rdl-checkbox">
+                    <input id="illustrations" type="checkbox" name="category">
+                    <label for="illustrations">Illustrationer</label>
+                  </div>
+                  <div class="rdl-checkbox">
+                    <input id="portraits" type="checkbox" name="category">
+                    <label for="portraits">Portrætter</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="cell small-12 medium-8">
@@ -73,6 +119,7 @@
 
 import { mapState } from 'vuex'
 import CardColumns from '@/components/CardColumns.vue'
+import accordion from '../assets/js/accordion.js'
 
 export default {
   name: 'Results',
@@ -88,6 +135,9 @@ export default {
     ...mapState({
       searchResult: state => state.search.all.searchResult
     })
+  },
+  mounted () {
+    accordion.onReady()
   },
   methods: {
     onChange (event) {
