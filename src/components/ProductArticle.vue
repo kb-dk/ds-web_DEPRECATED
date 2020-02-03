@@ -22,9 +22,13 @@
       <dt>Dimension</dt>
       <dd>{{ result.width_pixels }} x {{ result.height_pixels }} pixels</dd>
       <dt>Oprettet dato</dt>
-      <dd>{{ $d(new Date(result.created_date), 'long') }}</dd>
+      <dd v-if="result.created_date">
+        {{ $d(new Date(result.created_date), 'long') }}
+      </dd>
       <dt>Modificeret dato</dt>
-      <dd>{{ $d(new Date(result.modified_date), 'long') }}</dd>
+      <dd v-if="result.modified_date">
+        {{ $d(new Date(result.modified_date), 'long') }}
+      </dd>
     </dl>
   </article>
 </template>
