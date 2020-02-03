@@ -1,7 +1,7 @@
 import { app } from '../main'
 import { languageService } from '../services/language-service'
 
-export const state = {
+const state = {
   lang: 'da'
 }
 

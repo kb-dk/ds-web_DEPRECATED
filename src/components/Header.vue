@@ -25,9 +25,9 @@
               <li><a href="">{{ $t('firstNavbar.aboutRoyalLibrary') | capitalize({ onlyFirstLetter: true }) }}</a></li>
               <li><a href="#" @click="toggleLanguage">{{ $t('firstNavbar.otherLanguage') | capitalize({ onlyFirstLetter: true }) }}</a></li>
               <li>
-                <a id="loginBtn"
-                   href="">{{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
-                </a>
+                <router-link to="/login">
+                  {{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
+                </router-link>
               </li>
             </ul>
           </nav>

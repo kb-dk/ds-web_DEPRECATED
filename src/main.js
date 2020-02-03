@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import i18n from './lang'
-import store from './store'
 import router from './router/router'
+import store from './store'
+import i18n from './lang'
 import './styles/main.scss'
 import './assets/css/style.css'
 
