@@ -31,12 +31,15 @@
               <Aside />
             </div>
             <div class="cell small-12 large-12">
-              <ProductHeading :image-result="imageResult" />
+              <ProductHeading v-if="imageResult" :image-result="imageResult" />
               <div class="grid-x grid-margin-x grid-padding-y">
                 <div class="small-12 medium-12 cell">
-                  <ProductArticle :image-result="imageResult" />
+                  <ProductArticle v-if="imageResult" :image-result="imageResult" />
                 </div>
               </div>
+            </div>
+            <div>
+              <RelatedImages v-if="imageResult" :image-result="imageResult" />
             </div>
           </div>
         </div>
@@ -50,6 +53,7 @@
 import Aside from '@/components/Aside.vue'
 import ProductHeading from '@/components/ProductHeading.vue'
 import ProductArticle from '@/components/ProductArticle.vue'
+import RelatedImages from '@/components/RelatedImages.vue'
 import Footer from '@/components/Footer.vue'
 import { mapState, mapActions } from 'vuex'
 
@@ -59,6 +63,7 @@ export default {
     Aside,
     ProductHeading,
     ProductArticle,
+    RelatedImages,
     Footer
   },
   computed: {
