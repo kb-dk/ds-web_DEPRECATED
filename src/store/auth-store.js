@@ -9,7 +9,7 @@ Vue.use(VueAxios, axios)
 
 const vueAuth = new VueAuthenticate(Vue.prototype.$http, {
   tokenName: 'access_token',
-  baseUrl: 'http://localhost:3000', // API domain
+  baseUrl: '/', // API domain
   storageType: 'cookieStorage',
   providers: {
     kb: {
@@ -33,7 +33,7 @@ const actions = {
   // Perform VueAuthenticate login using Vuex actions
   login (context, payload) {
     console.log(payload)
-    vueAuth.login(payload.email, payload.password).then((response) => {
+    vueAuth.login({ email: payload.email, password: payload.password }).then((response) => {
       context.commit('isAuthenticated', {
         isAuthenticated: vueAuth.isAuthenticated()
       })
