@@ -13,7 +13,8 @@ const vueAuth = new VueAuthenticate(Vue.prototype.$http, {
   storageType: 'cookieStorage',
   providers: {
     kb: {
-      clientId: '',
+      clientId: 'digisam',
+      defaultUrlParams: ['response_type', 'client_id', 'redirect_uri'],
       redirectUri: 'http://localhost:8081/auth/callback' // Your client app URL
     }
   }
@@ -37,6 +38,12 @@ const actions = {
       context.commit('isAuthenticated', {
         isAuthenticated: vueAuth.isAuthenticated()
       })
+    })
+  },
+  register (context, payload) {
+    console.log(payload)
+    vueAuth.register({ email: payload.email, password: payload.password }).then((response) => {
+      console.log('registered')
     })
   }
 }

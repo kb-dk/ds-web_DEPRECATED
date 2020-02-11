@@ -68,7 +68,7 @@
               </div>
               <div class="cell small-12 medium-6">
                 <div class="box flex-container">
-                  <button class="rdl-button hollow">
+                  <button class="rdl-button hollow" @click="register">
                     Opret dig som låner
                   </button>
                 </div>
@@ -166,6 +166,10 @@ export default {
     login () {
       const { email, password } = this
       this.$store.dispatch('login', { email, password })
+    },
+    register () {
+      const { email, password } = this
+      this.$store.dispatch('register', { email, password })
     }
   }
 }
