@@ -51,14 +51,14 @@
                 }}</a>
               </li>
               <li v-if="!$auth.loading">
-                <a href="#" v-if="!$auth.isAuthenticated" @click="login">
+                <a v-if="!$auth.isAuthenticated" href="#" @click="login">
                   {{
                     $t('firstNavbar.login')
                       | capitalize({ onlyFirstLetter: true })
                   }}
                   <i class="icon zmdi-account-circle icon-xsmall" />
                 </a>
-                <a href="#" v-if="$auth.isAuthenticated" @click="logout">
+                <a v-if="$auth.isAuthenticated" href="#" @click="logout">
                   {{
                     $t('firstNavbar.logout')
                       | capitalize({ onlyFirstLetter: true })
