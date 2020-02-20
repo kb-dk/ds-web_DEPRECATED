@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import ProductPage from '../views/ProductPage.vue'
+import Profile from '../views/Profile.vue'
+import { authGuard } from '../auth/authGuard'
 
 Vue.use(Router)
 
@@ -25,6 +27,12 @@ export default new Router({
       path: '/view/:id',
       name: 'product_page',
       component: ProductPage
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
+      beforeEnter: authGuard
     }
   ]
 })

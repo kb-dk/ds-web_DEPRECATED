@@ -3,7 +3,9 @@
     "loans": "udlån",
     "openingHours": "åbningstider",
     "aboutRoyalLibrary": "om Det Kgl. Bibliotek",
+    "profile": "profil",
     "login": "log ind",
+    "logout": "log ud",
     "otherLanguage": "in English"
   },
   "secondNavbar": {

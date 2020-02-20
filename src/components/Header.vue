@@ -20,24 +20,71 @@
         <div class="show-for-large medium-9 cell navs">
           <nav class="top-nav">
             <ul>
-              <li><a href="">{{ $t('firstNavbar.loans') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-              <li><a href="">{{ $t('firstNavbar.openingHours') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-              <li><a href="">{{ $t('firstNavbar.aboutRoyalLibrary') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-              <li><a href="#" @click="toggleLanguage">{{ $t('firstNavbar.otherLanguage') | capitalize({ onlyFirstLetter: true }) }}</a></li>
               <li>
-                <router-link to="/login">
-                  {{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
-                </router-link>
+                <a href="">{{
+                  $t('firstNavbar.loans')
+                    | capitalize({ onlyFirstLetter: true })
+                }}</a>
+              </li>
+              <li>
+                <a href="">{{
+                  $t('firstNavbar.openingHours')
+                    | capitalize({ onlyFirstLetter: true })
+                }}</a>
+              </li>
+              <li>
+                <a href="">{{
+                  $t('firstNavbar.aboutRoyalLibrary')
+                    | capitalize({ onlyFirstLetter: true })
+                }}</a>
+              </li>
+              <li>
+                <a href="#" @click="toggleLanguage">{{
+                  $t('firstNavbar.otherLanguage')
+                    | capitalize({ onlyFirstLetter: true })
+                }}</a>
+              </li>
+              <li v-if="$auth.isAuthenticated">
+                <a href="/profile">{{
+                  $t('firstNavbar.profile')
+                    | capitalize({ onlyFirstLetter: true })
+                }}</a>
+              </li>
+              <li v-if="!$auth.loading">
+                <a href="#" v-if="!$auth.isAuthenticated" @click="login">
+                  {{
+                    $t('firstNavbar.login')
+                      | capitalize({ onlyFirstLetter: true })
+                  }}
+                  <i class="icon zmdi-account-circle icon-xsmall" />
+                </a>
+                <a href="#" v-if="$auth.isAuthenticated" @click="logout">
+                  {{
+                    $t('firstNavbar.logout')
+                      | capitalize({ onlyFirstLetter: true })
+                  }}
+                  <i class="icon zmdi-account-circle icon-xsmall" />
+                </a>
               </li>
             </ul>
           </nav>
           <nav class="main-nav">
             <ul>
-              <li><a href="">{{ $t('secondNavbar.findMaterial') | uppercase }}</a></li>
-              <li><a href="">{{ $t('secondNavbar.inspiration') | uppercase }}</a></li>
-              <li><a href="">{{ $t('secondNavbar.services') | uppercase }}</a></li>
-              <li><a href="">{{ $t('secondNavbar.arrangements') | uppercase }}</a></li>
-              <li><a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a></li>
+              <li>
+                <a href="">{{ $t('secondNavbar.findMaterial') | uppercase }}</a>
+              </li>
+              <li>
+                <a href="">{{ $t('secondNavbar.inspiration') | uppercase }}</a>
+              </li>
+              <li>
+                <a href="">{{ $t('secondNavbar.services') | uppercase }}</a>
+              </li>
+              <li>
+                <a href="">{{ $t('secondNavbar.arrangements') | uppercase }}</a>
+              </li>
+              <li>
+                <a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a>
+              </li>
               <li>
                 <button id="searchBtn" alt="search">
                   <i class="icon zmdi-search icon-medium" />
@@ -63,11 +110,29 @@
             <div class="grid-x grid-padding-x">
               <div class="cell">
                 <ul>
-                  <li><a href="#">{{ $t('secondNavbar.findMaterial') | uppercase }}</a></li>
-                  <li><a href="#">{{ $t('secondNavbar.inspiration') | uppercase }}</a></li>
-                  <li><a href="#">{{ $t('secondNavbar.services') | uppercase }}</a></li>
-                  <li><a href="##">{{ $t('secondNavbar.arrangements') | uppercase }}</a></li>
-                  <li><a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a></li>
+                  <li>
+                    <a href="#">{{
+                      $t('secondNavbar.findMaterial') | uppercase
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{
+                      $t('secondNavbar.inspiration') | uppercase
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{
+                      $t('secondNavbar.services') | uppercase
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="##">{{
+                      $t('secondNavbar.arrangements') | uppercase
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="">{{ $t('secondNavbar.visitUs') | uppercase }}</a>
+                  </li>
                   <li id="searchText" class="search">
                     <a href="#">{{ $t('search.searchOn') | uppercase }} kb.dk</a>
                     <div class="action">
@@ -89,13 +154,37 @@
             <div class="grid-x grid-padding-x grid-padding-y">
               <div class="cell">
                 <ul>
-                  <li><a href="">{{ $t('firstNavbar.loans') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-                  <li><a href="">{{ $t('firstNavbar.openingHours') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-                  <li><a href="">{{ $t('firstNavbar.aboutRoyalLibrary') | capitalize({ onlyFirstLetter: true }) }}</a></li>
-                  <li><a href="#" @click="toggleLanguage">{{ $t('firstNavbar.otherLanguage') | capitalize({ onlyFirstLetter: true }) }}</a></li>
+                  <li>
+                    <a href="">{{
+                      $t('firstNavbar.loans')
+                        | capitalize({ onlyFirstLetter: true })
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="">{{
+                      $t('firstNavbar.openingHours')
+                        | capitalize({ onlyFirstLetter: true })
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="">{{
+                      $t('firstNavbar.aboutRoyalLibrary')
+                        | capitalize({ onlyFirstLetter: true })
+                    }}</a>
+                  </li>
+                  <li>
+                    <a href="#" @click="toggleLanguage">{{
+                      $t('firstNavbar.otherLanguage')
+                        | capitalize({ onlyFirstLetter: true })
+                    }}</a>
+                  </li>
                   <li>
                     <a id="loginBtn"
-                       href="">{{ $t('firstNavbar.login') | capitalize({ onlyFirstLetter: true }) }} <i class="icon zmdi-account-circle icon-xsmall" />
+                       href="">{{
+                                 $t('firstNavbar.login')
+                                   | capitalize({ onlyFirstLetter: true })
+                               }}
+                      <i class="icon zmdi-account-circle icon-xsmall" />
                     </a>
                   </li>
                 </ul>
@@ -128,6 +217,15 @@ export default {
     toggleLanguage: function () {
       var newLang = this.$i18n.locale === 'en' ? 'da' : 'en'
       this.setLanguage(newLang)
+    },
+    login () {
+      this.$auth.loginWithRedirect()
+    },
+    // Log the user out
+    logout () {
+      this.$auth.logout({
+        returnTo: window.location.origin
+      })
     }
   }
 }

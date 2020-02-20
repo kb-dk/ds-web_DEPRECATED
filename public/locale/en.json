@@ -3,7 +3,9 @@
     "loans": "loans",
     "openingHours": "opening hours",
     "aboutRoyalLibrary": "about The Royal Library",
+    "profile": "profile",
     "login": "login",
+    "logout": "logout",
     "otherLanguage": "på Dansk"
   },
   "secondNavbar": {
