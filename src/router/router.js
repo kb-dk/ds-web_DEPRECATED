@@ -26,7 +26,8 @@ export default new Router({
     {
       path: '/view/:id',
       name: 'product_page',
-      component: ProductPage
+      component: ProductPage,
+      beforeEnter: authGuard
     },
     {
       path: '/profile',

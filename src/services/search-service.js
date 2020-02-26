@@ -4,10 +4,16 @@ export const searchService = {
   search, lookup
 }
 
-function search (params) {
+async function search (params) {
   const url = '/search-api/search/solr/ds/select?q=' + params
+  const token = await this.$auth.getTokenSilently()
 
-  return axios.get(url).then(response => {
+  return axios.get(url, {
+    headers: {
+      // send the access token through the 'Authorization' header
+      Authorization: `Bearer ${token}`
+    }
+  }).then(response => {
     return response.data
   }).catch(error => {
     return Promise.reject(error)
@@ -16,6 +22,7 @@ function search (params) {
 
 function lookup (params) {
   const url = '/search-api/search/solr/ds/get?ids=' + params
+
   return axios.get(url).then(response => {
     return response.data
   }).catch(error => {
