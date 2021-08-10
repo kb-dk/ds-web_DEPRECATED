@@ -53,7 +53,7 @@ openshift.withCluster() { // Use "default" cluster or fallback to OpenShift clus
                     if (env.BRANCH_NAME == 'master') {
                         configFileProvider([configFile(fileId: "imagePromoter", variable: 'promoter')]) {
                             def promoter = load promoter
-                            promoter.promoteImage("ds-solr", "${projectName}",  "digitalesamlinger", "latest")
+                            promoter.promoteImage("ds-web", "${projectName}",  "digitalesamlinger", "latest")
                         }
                     } else {
                         echo "Branch ${env.BRANCH_NAME} is not develop, so no promotion"
