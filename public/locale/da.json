@@ -1,0 +1,37 @@
+{
+  "firstNavbar": {
+    "loans": "udlån",
+    "openingHours": "åbningstider",
+    "aboutRoyalLibrary": "om Det Kgl. Bibliotek",
+    "login": "log ind",
+    "otherLanguage": "in English"
+  },
+  "secondNavbar": {
+    "findMaterial": "find materiale",
+    "inspiration": "inspiration",
+    "services": "services",
+    "arrangements": "arrangementer",
+    "visitUs": "besøg os"
+  },
+  "thirdNavbar": {
+    "all": "alt",
+    "booksAndMagazines": "bøger og tidsskrifter",
+    "pictures": "billeder"
+  },
+  "search": {
+    "searchInPictures": "søg i billeder",
+    "youSearchedFor": "du søgte på",
+    "search": "søg",
+    "searchOn": "søg på"
+  },
+  "filters": {
+    "access": "adgang",
+    "year": "årstal",
+    "locality": "Lokalitet",
+    "online": "tilgængelig online"
+  },
+  "viewOptions": {
+    "gallery": "Gallerivisning",
+    "sortBy": "Sorter efter"
+  }
+}
