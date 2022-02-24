@@ -1,6 +1,6 @@
-# ds-web
+# ds-web-deprecated
 
-This project is no longer active and is superseded by https://github.com/kb-dk/ds-web
+This project is no longer active. It is archived and superseded by https://github.com/kb-dk/ds-web
 
 ## Project setup
 ```
