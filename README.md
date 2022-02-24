@@ -1,5 +1,7 @@
 # ds-web
 
+This project is no longer active and is superseded by https://github.com/kb-dk/ds-web
+
 ## Project setup
 ```
 npm install
